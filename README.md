@@ -73,12 +73,10 @@ CREATE TABLE placed_orders (
 
 
 ### Deploying the Bookstore Web Application 
-1. Download the Bookstore project from the [GitHub repository](https://github.com/misterrioes/Bookstore) . 
+1. Download the zip file Bookstore.zip rom the [GitHub repository](https://github.com/misterrioes/Bookstore) . 
 2. Extract the downloaded project folder to a location on your computer. 
 3. Open Eclipse IDE. 
 4. Import the project into Eclipse: 
-- Select **File**  -> **Import**  -> **Existing Projects into Workspace** .
-- Browse to the location where you extracted the project folder. 
 - Select the project and click **Run on server** .
 - Wait for the server to start and deploy the Bookstore web application.
 - Eclipse will open a web browser with the Bookstore application running on http://localhost:8080/Bookstore.
