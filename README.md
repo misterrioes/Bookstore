@@ -121,11 +121,24 @@ public abstract class JDBCConnection {
   ```
 
 4. Bootstrap:
+  - Description:
+Bootstrap is a popular CSS framework that provides pre-styled components, grids, and CSS classes for building responsive web pages. 
+ 
 - Usage:
 ```html
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<label for="user" class="form-label">Username</label>
+        <input type="text" class="form-control" name="user" id="user" placeholder="Enter your username">
 ```   
 5. Font Awesome 4:
 - Description: Font Awesome is a font and icon toolkit that allows you to easily add scalable vector icons to your web projects.
+- Usage: 
+  ```js
+deleteButton.innerHTML = '<button onclick=deleteFromBasket(' + book['id'] + 
+') class="btn btn-danger btn-sm rounded-0" type="button"><i class="fa fa-trash-o" style="font-size:32px;color:red"></i></button>';
+  ```
 - Website: [Font Awesome](https://fontawesome.com/v4.7.0/)
+
+Please make sure to download the appropriate versions of these libraries. Include these java-libraries in your project's classpath and add them to  web application's WEB-INF/lib folder if not aleady present.
