@@ -135,10 +135,62 @@ Bootstrap is a popular CSS framework that provides pre-styled components, grids,
 5. Font Awesome 4:
 - Description: Font Awesome is a font and icon toolkit that allows you to easily add scalable vector icons to your web projects.
 - Usage: 
-  ```js
-deleteButton.innerHTML = '<button onclick=deleteFromBasket(' + book['id'] + 
+```html
+'<button onclick=deleteFromBasket(' + book['id'] + 
 ') class="btn btn-danger btn-sm rounded-0" type="button"><i class="fa fa-trash-o" style="font-size:32px;color:red"></i></button>';
+
   ```
+
 - Website: [Font Awesome](https://fontawesome.com/v4.7.0/)
 
 Please make sure to download the appropriate versions of these libraries. Include these java-libraries in your project's classpath and add them to  web application's WEB-INF/lib folder if not aleady present.
+
+## Database Schema:
+-The schema can be deduced by the Create table statements from the installation.  
+
+## Api Calls
+- Certainly! Here is the consolidated list of API calls used to communicate with the backend in the provided code: 
+1. API Call: `POST http://localhost:8080/Bookstore/ShoppingCartServlet` 
+- Function: `addToBasket()`
+- Method: POST 
+- Headers:
+- Content-Type: application/x-www-form-urlencoded 
+- Body:
+- action: putToBasket
+- bookId
+- quantity
+2. API Call: `POST http://localhost:8080/Bookstore/ShoppingCartServlet` 
+- Function: `updateBasketQuantity(changedQuantityField)`
+- Method: POST 
+- Headers:
+- Content-Type: application/x-www-form-urlencoded 
+- Body:
+- action: 'updateBasket'
+- bookId: [extracted from changedQuantityField.id]
+- quantity: [value from changedQuantityField.value] 
+3. API Call: `POST http://localhost:8080/Bookstore/ShoppingCartServlet` 
+- Function: `deleteFromBasket(bookId)`
+- Method: POST 
+- Headers:
+- Content-Type: application/x-www-form-urlencoded 
+- Body:
+- action: deleteFromBasket
+- bookId
+4. API Call: `GET http://localhost:8080/Bookstore/ShoppingCartServlet` 
+- Function: `loadshoppingCart()`
+- Method: GET 
+5. API Call: `GET http://localhost:8080/Bookstore/BookListServlet` 
+- Function: `loadshoppingCart()`
+- Method: GET 
+6. API Call: `POST http://localhost:8080/Bookstore/BookListServlet` 
+- Function: `loadFoundBooks()`
+- Method: POST 
+- Headers:
+- Content-Type: application/x-www-form-urlencoded 
+- Body:
+- searchWords:
+7. API Call: `GET http://localhost:8080/Bookstore/BookDetailPageServlet?bookID=<bookID>`
+- Function: Dynamically generated in the with JSP
+- Method: GET 
+- Parameters:
+- bookID:
